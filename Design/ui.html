@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<title>Test</title>
+</head>
+<body>
+<div data-free-discount="" class="m2g-order-basket-section m2g-order-section m2g-order-section--complete">
+	<div class="m2g-order-section-header">
+		<span class="m2g-order-section-title">Discount</span>
+		<span class="m2g-order-section-status"></span>
+	</div>
+	<div class="" data-basket="">
+		<style>
+		.center {
+			text-align:center;
+		}
+		.maxWidthT {
+			width:100%;
+			margin:0;
+			padding:0;
+		}
+		.maxWidthD {
+			width:100%;
+			text-align:center;
+		}
+		.container {
+			width:200px;
+			border:1px solid black;
+			font-size:0.75em;
+			font-family:Arial,san-serif;
+		}
+		</style>
+		<div class="discountContainer">
+			<table>
+				<tr>
+					<td class="maxWidthD">
+						<input type="range" name="discountSlider" id="discountSlider" min="0.00" value="0.00" step="0.01" oninput="updateDiscount(this)" class="maxWidthT">
+					</td>
+					<td class="center">
+						<span id="discountPercentage">100</span>&#37;
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+						<label for="discountAmount">$</label>
+					</td>
+					<td class="maxWidthD">
+						<input id="discountAmount" name="discountAmount" type="number" min="0.00" step="0.01" value="0.00" placeholder="0.00" oninput="updateDiscount(this)" class="maxWidthT">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
