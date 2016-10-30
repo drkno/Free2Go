@@ -3,8 +3,9 @@
 // @namespace   nz.co.makereti.free2goexploit
 // @description Give yourself discounts on any Mobi2Go orders
 // @include     *
-// @version     2
-// @logo        https://github.com/mrkno/Free2Go/raw/master/logo.png
+// @version     2.1
+// @icon        https://github.com/mrkno/Free2Go/raw/master/logo.png
+// @grant       none
 // ==/UserScript==
 
 window.addEventListener('load', () => {
@@ -13,7 +14,7 @@ window.addEventListener('load', () => {
     }
     console.log('Mobi2Go Detected');
 	
-	let injection = '<div data-free-discount="" class="m2g-order-basket-section m2g-order-section m2g-order-section--complete"><div class="m2g-order-section-header"><span class="m2g-order-section-title">Discount</span><span class="m2g-order-section-status"></span></div><div class="" data-basket=""><style>.center{text-align:center;}.maxWidthT{width:100%;margin:0;padding:0;}.maxWidthD{width:100%;text-align:center;}.container{width:200px;border:1px solid black;font-size:0.75em;font-family:Arial,san-serif;}</style><div class="discountContainer"><table><tr><td class="maxWidthD"><input type="range" name="discountSlider" id="discountSlider" min="0.00" value="0.00" step="0.01" class="maxWidthT"></td><td class="center"><span id="discountPercentage">100</span>&#37;</td></tr></table><table><tr><td><label for="discountAmount">$</label></td><td class="maxWidthD"><input id="discountAmount" name="discountAmount" type="number" min="0.00" step="0.01" value="0.00" placeholder="0.00" class="maxWidthT"></td></tr></table></div></div></div>';
+	let injection = '<div data-free-discount="" class="m2g-order-basket-section m2g-order-section m2g-order-section--complete"><div class="m2g-order-section-header"><span class="m2g-order-section-title">Discount</span><span class="m2g-order-section-status"></span></div><div class="" data-basket=""><style>.dcenter{text-align:center;}.dmaxWidthT{width:100%;margin:0;padding:0;}.dmaxWidthD{width:100%;text-align:center;}</style><div class="discountContainer"><table><tr><td class="dmaxWidthD"><input type="range" name="discountSlider" id="discountSlider" min="0.00" value="0.00" step="0.01" class="dmaxWidthT"></td><td class="dcenter"><span id="discountPercentage">100</span>&#37;</td></tr></table><table><tr><td><label for="discountAmount">$</label></td><td class="dmaxWidthD"><input id="discountAmount" name="discountAmount" type="number" min="0.00" step="0.01" value="0.00" placeholder="0.00" class="dmaxWidthT"></td></tr></table></div></div></div>';
 	$(injection).insertBefore('*[data-order-section="basket"]');
 	
 	let padLeft = (nr, n, str) => {
