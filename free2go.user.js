@@ -4,6 +4,7 @@
 // @description Give yourself discounts on any Mobi2Go orders
 // @include     *
 // @version     2
+// @logo        https://github.com/mrkno/Free2Go/raw/master/logo.png
 // ==/UserScript==
 
 window.addEventListener('load', () => {
