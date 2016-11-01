@@ -3,7 +3,7 @@
 // @namespace   nz.co.makereti.free2goexploit
 // @description Give yourself discounts on any Mobi2Go orders
 // @include     *
-// @version     2.2
+// @version     2.3
 // @grant       none
 // @run-at      document-end
 // @icon        https://github.com/mrkno/Free2Go/raw/master/logo.png
@@ -12,7 +12,7 @@
 // ==/UserScript==
 
 window.addEventListener('load', () => {
-    if (!Mobi2Go) {
+    if (!window.hasOwnProperty("Mobi2Go")) {
         return;
     }
     console.log('Mobi2Go Detected');
