@@ -1,6 +1,8 @@
 # Free2Go
 A trivial Mobi2Go proof of concept exploit that allows you to specify your own discount.
 
+**This bug was disclosed and fixed by Mobi2Go before the publishing of this POC.**
+
 ## How It Works
 Mobi2Go does not appear to be verifying that user input is valid. This is probably because there are few user-input fields to validate and it is assumed that any code running on a webpage is genuine.
 The easiest way to exploit this, with no modifications to the existing scripts on the page is to use the (mostly) unused tips field as follows:
